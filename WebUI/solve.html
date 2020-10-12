@@ -54,17 +54,50 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container-fluid">
+
+        <!-- Intro Row -->
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">The Exercise</h1>
-                <p class="lead">This page will display your JS exercise</p>
-                <ul class="list-unstyled">
-                    <li>The Javascript Exercise</li>
-                    <li>Is placed on this page</li>
-                </ul>
+                <h1 class="mt-5">Sunset Hills</h1>
             </div>
         </div>
+        
+        <!-- Instructions for user input -->
+        <div class="row text-center">
+            <div class="col">
+                <div class="h5">Please input 5 integers for building height then click the button to see which building positions can see the sunset to the west.</div>
+            </div>
+        </div>
+
+        <!-- Input ids: bld1-5 -->
+        <div class="form-inline row">
+            <div class="col">
+                <div class="row p-3">
+                    <input type="text" class="col m-1" id="bld1" autocomplete="off">
+                    <input type="text" class="col m-1" id="bld2" autocomplete="off">
+                    <input type="text" class="col m-1" id="bld3" autocomplete="off">
+                    <input type="text" class="col m-1" id="bld4" autocomplete="off">
+                    <input type="text" class="col m-1" id="bld5" autocomplete="off">
+                </div>
+            </div>
+        </div>
+
+        <!-- Input submission id="mathBtn" -->
+        <div class="row text-center">
+            <div class="col">
+                <input type="button" name="mathBtn" id="mathBtn" class="btn-primary btn-block p-2 text-center" value="Click Me">
+            </div>
+        </div>
+
+        <!--  id = output -->
+        <div class="row m-top-3">
+            <div class="col">
+                <div class="p-2 jumbotron text-black text-center" id="output">
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Bootstrap core JavaScript -->

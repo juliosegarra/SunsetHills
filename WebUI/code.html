@@ -60,7 +60,7 @@
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h1 class="mt-5">This Page shows your code syntax highlighted</h1>
+                <h1 class="mt-5">Sunset Hills Code</h1>
                 <!-- TABS  -->
                 <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                     <li class="nav-item">
@@ -79,14 +79,83 @@
             <div class="col-10 tab-pane fade show active" id="pills-javascript" role="tabpanel" aria-labelledby="pills-javascript-tab">
                 <pre class=" language-javascript">
                     <code class="language-javascript"> 
-                        JavaScript
+                        document.getElementById("mathBtn").addEventListener("click", function () {
+                            const bld1 = parseInt(document.getElementById("bld1").value);
+                            const bld2 = parseInt(document.getElementById("bld2").value);
+                            const bld3 = parseInt(document.getElementById("bld3").value);
+                            const bld4 = parseInt(document.getElementById("bld4").value);
+                            const bld5 = parseInt(document.getElementById("bld5").value);
+                            const bldArray = [bld1, bld2, bld3, bld4, bld5];
+                            const output = document.getElementById("output");
+                            output.innerHTML = "";
+                            let bldOutput = [];
+
+                            function isIndexTaller(arr) {
+                                const resultsArr = [];
+                                let currTallest = 0;
+                                for (let i = 0; i < arr.length; i++) {
+                                    if (arr[i] > currTallest) {
+                                        resultsArr.push(arr[i]);
+                                        currTallest = arr[i];
+                                    }
+                                }
+                                return resultsArr;
+                            }
+
+                            bldOutput = isIndexTaller(bldArray);
+                            output.innerHTML = `There are ${bldOutput.length} building(s) that can see the sunset: ${bldOutput}`;
+                        });
                     </code>
                 </pre>
             </div>
             <div class="col-10 tab-pane fade" id="pills-html" role="tabpanel" aria-labelledby="pills-html-tab">
                 <pre class="line-numbers language-markup">
                     <code class="language-markup">
-                        HTML 
+                         &lt;div class="container-fluid"&gt;
+
+                            &lt;!-- Intro Row --&gt;
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-lg-12 text-center"&gt;
+                                    &lt;h1 class="mt-5"&gt;Sunset Hills&lt;/h1&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;!-- Instructions for user input --&gt;
+                            &lt;div class="row text-center"&gt;
+                                &lt;div class="col"&gt;
+                                    &lt;div class="h5"&gt;Please input 5 integers for building height then click the button to see which building positions can see the sunset to the west.&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;!-- Input ids: bld1-5 --&gt;
+                            &lt;div class="form-inline row"&gt;
+                                &lt;div class="col"&gt;
+                                    &lt;div class="row p-3"&gt;
+                                        &lt;input type="text" class="col m-1" id="bld1" autocomplete="off"&gt;
+                                        &lt;input type="text" class="col m-1" id="bld2" autocomplete="off"&gt;
+                                        &lt;input type="text" class="col m-1" id="bld3" autocomplete="off"&gt;
+                                        &lt;input type="text" class="col m-1" id="bld4" autocomplete="off"&gt;
+                                        &lt;input type="text" class="col m-1" id="bld5" autocomplete="off"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;!-- Input submission id="mathBtn" --&gt;
+                            &lt;div class="row text-center"&gt;
+                                &lt;div class="col"&gt;
+                                    &lt;input type="button" name="mathBtn" id="mathBtn" class="btn-primary btn-block p-2 text-center" value="Click Me"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;!--  id = output --&gt;
+                            &lt;div class="row m-top-3"&gt;
+                                &lt;div class="col"&gt;
+                                    &lt;div class="p-2 jumbotron text-black text-center" id="output"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
                     </code>
                 </pre>
             </div>
